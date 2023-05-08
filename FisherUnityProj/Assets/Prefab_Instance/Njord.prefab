@@ -228,8 +228,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1256006369049125085}
   - component: {fileID: 5156084976561748647}
-  - component: {fileID: 6372179906270399203}
   - component: {fileID: 991351546421826653}
+  - component: {fileID: 2884413173842190891}
   m_Layer: 0
   m_Name: Njord
   m_TagString: Untagged
@@ -259,7 +259,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!95 &5156084976561748647
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -272,56 +272,11 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6372179906270399203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884171021968046695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2b6bd56d822ab4fa2bd11a75dbbf3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_name: Njord
-  m_standRange: 15
-  m_greetRange: 5
-  m_byeRange: 5
-  m_items: []
-  m_hideDialogDelay: 5
-  m_randomTalkInterval: 30
-  m_randomTalk: []
-  m_randomGreets: []
-  m_randomGoodbye: []
-  m_randomStartTrade: []
-  m_randomBuy: []
-  m_randomSell: []
-  m_randomTalkFX:
-    m_effectPrefabs: []
-  m_randomGreetFX:
-    m_effectPrefabs:
-    - m_prefab: {fileID: 5307251207339125786, guid: 6e23da8910efe5c469894f8c42ca1e33, type: 3}
-      m_enabled: 1
-      m_variant: -1
-      m_attach: 0
-      m_inheritParentRotation: 0
-      m_inheritParentScale: 0
-      m_randomRotation: 0
-      m_scale: 0
-      m_childTransform: 
-  m_randomGoodbyeFX:
-    m_effectPrefabs: []
-  m_randomStartTradeFX:
-    m_effectPrefabs: []
-  m_randomBuyFX:
-    m_effectPrefabs: []
-  m_randomSellFX:
-    m_effectPrefabs: []
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!136 &991351546421826653
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -336,6 +291,47 @@ CapsuleCollider:
   m_Height: 4.53
   m_Direction: 2
   m_Center: {x: 0.09, y: 0, z: -2.29}
+--- !u!114 &2884413173842190891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884171021968046695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df3b729c35a4239488c4c187c4d0f634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: fisherSalesObjects
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UnityEngine.GameObject,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &2286063810357818576
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +693,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be3145b60d5d8ba4c8bdcc74ad130dec, type: 2}
+  - {fileID: 2100000, guid: 878944d83b848bd4489235388fa2c5fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -722,7 +718,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -7493558035524822703, guid: 15131e9fde7bba248a8e017b4d194b7b, type: 3}
+  m_Mesh: {fileID: -7493558035524822703, guid: 2ed0ac8e22f70e2438f371c1c4bd9de3, type: 3}
   m_Bones:
   - {fileID: 3919505874569201663}
   - {fileID: 2859172211877423329}
@@ -881,7 +877,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 27d1160e3dbdfe64ea01acccb3862c57, type: 2}
+  - {fileID: 2100000, guid: 4abd6f6baa00e504992329553e9eb96f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -906,7 +902,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -7070831255929112694, guid: 15131e9fde7bba248a8e017b4d194b7b, type: 3}
+  m_Mesh: {fileID: -7070831255929112694, guid: 885dc031ae78d124fbf59ca7610aaa1b, type: 3}
   m_Bones:
   - {fileID: 7510938034384871999}
   m_BlendShapeWeights: []
@@ -1103,7 +1099,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e7bb588dea08bf2408b2502e1999a844, type: 2}
+  - {fileID: 2100000, guid: ff8e38960881f5740b37be65cd3aea77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1128,7 +1124,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -368589985496300829, guid: 15131e9fde7bba248a8e017b4d194b7b, type: 3}
+  m_Mesh: {fileID: -368589985496300829, guid: 2ed0ac8e22f70e2438f371c1c4bd9de3, type: 3}
   m_Bones:
   - {fileID: 2859172211877423329}
   - {fileID: 495831203316867449}
@@ -1340,7 +1336,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f02cea3ccd2fe848b9821b490e92a65, type: 2}
+  - {fileID: 2100000, guid: 15a474b46c80d5d419460ad735180247, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1365,7 +1361,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -4020313881474688948, guid: 15131e9fde7bba248a8e017b4d194b7b, type: 3}
+  m_Mesh: {fileID: -4020313881474688948, guid: 885dc031ae78d124fbf59ca7610aaa1b, type: 3}
   m_Bones:
   - {fileID: 2402812882704085653}
   m_BlendShapeWeights: []
@@ -1826,7 +1822,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 00d9fbc91638df44a947ee64f178347c, type: 2}
+  - {fileID: 2100000, guid: 9d8efc59a17a39b43b5ee2ea3b0465ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1851,7 +1847,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4976957901415362066, guid: 15131e9fde7bba248a8e017b4d194b7b, type: 3}
+  m_Mesh: {fileID: 4976957901415362066, guid: 885dc031ae78d124fbf59ca7610aaa1b, type: 3}
   m_Bones:
   - {fileID: 8812626579678131698}
   - {fileID: 4957898164797646241}

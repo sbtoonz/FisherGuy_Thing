@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: basket
-  m_Shader: {fileID: 4800000, guid: 4e83a10b9a1d57d428ac736fe778063e, type: 3}
-  m_ShaderKeywords: _ADDRAIN_ON
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ADDRAIN_ON _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 73a5d1f756dcfbb4fa26e23cb0a98408, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2cca8537c1604dc42bd11a9bf82747d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 222d2cb0e10e09f4e927f1dc594f8111, type: 3}
+        m_Texture: {fileID: 2800000, guid: 07fcfffd4ec5060489732ec72d1cbe2f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 3a7135d837efc3749b9a7d2c94d67543, type: 3}
+        m_Texture: {fileID: 2800000, guid: 425dbc4dc3e011240ae312beaef1e3c7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:

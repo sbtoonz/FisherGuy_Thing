@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FisherGuy</RootNamespace>
     <AssemblyName>FisherGuy</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <LangVersion>9</LangVersion>
 	<Nullable>enable</Nullable>
@@ -21,7 +21,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -79,6 +79,9 @@
     <Reference Include="PlayFabParty">
       <HintPath>$(GamePath)\valheim_Data\Managed\PlayFabParty.dll</HintPath>
     </Reference>
+    <Reference Include="Sirenix">
+      <HintPath>libs\Sirenix.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -89,13 +92,20 @@
     <Reference Include="UnityEngine">
       <HintPath>$(GamePath)\unstripped_corlib\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\unstripped_corlib\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(GamePath)\unstripped_corlib\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\FisherUnityProj\Assets\Scripts\FisherMan_Trader.cs">
+      <Link>Monobehaviours\FisherMan_Trader.cs</Link>
+    </Compile>
     <Compile Include="ModCore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServerSync\ServerSync.csproj">
@@ -104,10 +114,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <EmbeddedResource Include="..\FisherUnityProj\Assets\AssetBundles\fisherguy">
+      <Link>assets\fisherguy</Link>
+    </EmbeddedResource>
+    <Content Include="ILRepack.targets" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ILRepack.targets" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -117,6 +130,9 @@
     <Target Name="AfterBuild">
     </Target>
     -->
+	 <Target Name="Copy" AfterTargets="Build">
+     <Exec Command="copy /Y &quot;$(TargetDir)$(AssemblyName).dll&quot; &quot;$(GamePath)\BepInEx\plugins\$(AssemblyName).dll&quot;" />
+	</Target>
 	 <Import Project="..\packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets" Condition="Exists('..\packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets')" />
 	 <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
 	   <PropertyGroup>
@@ -124,7 +140,4 @@
 	   </PropertyGroup>
 	   <Error Condition="!Exists('..\packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets'))" />
 	 </Target>
-	 <Target Name="Copy" AfterTargets="Build">
-     <Exec Command="copy /Y &quot;$(TargetDir)$(AssemblyName).dll&quot; &quot;$(GamePath)\BepInEx\plugins\$(AssemblyName).dll&quot;" />
-	</Target>
 </Project>
